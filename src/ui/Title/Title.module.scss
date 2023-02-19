@@ -1,0 +1,13 @@
+.h1 {
+	font-weight: 400;
+	font-size: 300px;
+	line-height: 90%;
+	letter-spacing: -0.03em;
+}
+
+@media screen and (max-width: 1680px) {
+	.h1 {
+		font-size: 260px;
+		line-height: 95%;
+	}
+}

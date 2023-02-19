@@ -1,0 +1,36 @@
+.title {
+	font-weight: 400;
+	font-size: 56px;
+	line-height: 50px;
+}
+
+.drawers {
+	margin-top: 84px;
+	display: flex;
+	width: max-content;
+}
+
+.top {
+	padding-top: 80px;
+}
+
+.drawer {
+	height: 803px;
+	width: 1373px;
+}
+
+.drawer__head {
+	flex-direction: column;
+	padding: 80px 0;
+	justify-content: space-between;
+	line-height: 1;
+	align-items: center;
+	width: 140px;
+	height: 100%;
+	position: relative;
+}
+
+.drawer__title {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}

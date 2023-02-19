@@ -6,10 +6,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.css'
 import { ThemeProvider } from 'next-themes'
 import 'normalize.css'
 import { useRef } from 'react'
-import {
-	LocomotiveScrollProvider,
-	LocomotiveScrollProvider as RLSProvider,
-} from 'react-locomotive-scroll'
+import { LocomotiveScrollProvider as RLSProvider } from 'react-locomotive-scroll'
 
 import '../styles/globals.scss'
 
@@ -74,17 +71,17 @@ export default function App({ Component, pageProps }: AppProps) {
 					font-family: ${graphic.style.fontFamily};
 				}
 			`}</style>
-			<LocomotiveScrollProvider
+			<RLSProvider
 				options={{
 					smooth: true,
-					smartphone: {
-						smooth: true,
-					},
-					tablet: {
-						smooth: true,
-					},
 				}}
-				watch={[]}
+				watch={
+					[
+						//..all the dependencies you want to watch to update the scroll.
+						//  Basicaly, you would want to watch page/location changes
+						//  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+					]
+				}
 				location={asPath}
 				onLocationChange={(scroll: any) =>
 					scroll.scrollTo(0, { duration: 0, disableLerp: true })
@@ -94,7 +91,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<main data-scroll-container ref={containerRef}>
 					<Component {...pageProps} />
 				</main>
-			</LocomotiveScrollProvider>
+			</RLSProvider>
 		</>
 	)
 }
