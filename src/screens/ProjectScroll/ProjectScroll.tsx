@@ -83,13 +83,17 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
 		>
 			<div className="container">
 				<div
-					className="flex justify-between items-end h-screen pb-60"
+					className="flex justify-between items-end h-screen pb-60 pointer-events-none relative z-[1]"
 					data-scroll
 					data-scroll-sticky
 					data-scroll-target="#fix"
 				>
-					<h2 className={s.title}>{title}</h2>
-					<LinkCircle link="/projects" text="Все проекты" />
+					<h2 className={cn(s.title, '')}>{title}</h2>
+					<LinkCircle
+						link="/projects"
+						text="Все проекты"
+						className="pointer-events-auto"
+					/>
 				</div>
 
 				<div className={s.cards}>
