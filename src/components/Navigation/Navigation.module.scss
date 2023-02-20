@@ -14,6 +14,18 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	height: 100%;
+	&:hover {
+		.card__link {
+			color: #bfbfbf;
+		}
+	}
+
+	.card__link {
+		&:hover {
+			opacity: 1;
+			color: $text;
+		}
+	}
 }
 
 .card {
@@ -22,6 +34,7 @@
 	align-items: flex-end;
 	justify-content: space-between;
 	padding-bottom: 30px;
+	transition: all 0.2s ease;
 
 	&:nth-child(odd) {
 		border-right: 1px solid $strokeLight;
@@ -50,4 +63,7 @@
 }
 
 .card__num {
+}
+
+.card__link {
 }

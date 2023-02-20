@@ -38,7 +38,11 @@ export const Navigation = ({ className, isOpen, setIsOpen }: iNavigation) => {
 		>
 			<div className={s.wrap}>
 				{links.map((item) => (
-					<Link href={item.link} key={item.id} className={s.card}>
+					<Link
+						href={item.link}
+						key={item.id}
+						className={cn(s.card, s.card__link)}
+					>
 						<p className={s.card__title}>{item.title}</p>
 						<p className={s.card__num}>/{item.num}</p>
 					</Link>
