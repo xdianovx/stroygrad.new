@@ -10,7 +10,7 @@ export const Header = () => {
 	const [isNavOpen, setIsNavOpen] = useState(false)
 
 	return (
-		<header className={s.header} data-scroll-sectione>
+		<header className={s.header} data-scroll-section>
 			<Navigation isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
 			<div className="container">
 				<div className={s.wrap}>
