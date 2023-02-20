@@ -8,10 +8,6 @@ import { Burger, Logo, ThemeChanger } from '@/ui/index'
 
 export const Header = () => {
 	const [isNavOpen, setIsNavOpen] = useState(false)
-	const body = document.querySelector('body')
-	if (isNavOpen) {
-		body.style.overflow = 'hidden'
-	}
 
 	return (
 		<header className={s.header} data-scroll-sectione>

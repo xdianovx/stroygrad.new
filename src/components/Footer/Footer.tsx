@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import PinSvg from './Pin.svg'
 import LogoSvg from './logo.svg'
+import cn from 'classnames'
 import Marquee from 'react-fast-marquee'
 
 import s from './Footer.module.scss'
@@ -82,9 +83,18 @@ export const Footer = () => {
 				<div className={s.left}>
 					<nav>
 						{links.map((item) => (
-							<Link className={s.link} href={item.to} key={+item.id}>
-								<p>{item.title}</p>
-								<span>{item.num}</span>
+							<Link
+								className={cn(s.link, 'relative group')}
+								href={item.to}
+								key={+item.id}
+							>
+								<div className="absolute top-0 left-0 w-full h-0 bg-white group-hover:h-full transition-s duration-500 ease-[cubic-bezier(.77,.14,.11,.88)] z-[1]"></div>
+								<p className="group-hover:text-black relative z-[2]">
+									{item.title}
+								</p>
+								<span className="group-hover:text-black relative z-[2]">
+									{item.num}
+								</span>
 							</Link>
 						))}
 					</nav>
