@@ -1,19 +1,19 @@
 {
-	"printWidth": 80,
-	"tabWidth": 2,
-	"useTabs": true,
-	"trailingComma": "all",
-	"singleQuote": true,
-	"semi": false,
-	"arrowParens": "always",
-	"importOrder": [
-		"^next/",
-		"<THIRD_PARTY_MODULES>",
-		"(.scss)$",
-		"^@/layouts/",
-		"^@/components/",
-		"^@/ui/"
-	],
-	"importOrderSeparation": true,
-	"importOrderSortSpecifiers": true
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "semi": false,
+  "arrowParens": "always",
+  "importOrder": [
+    "^next/",
+    "<THIRD_PARTY_MODULES>",
+    "(.scss)$",
+    "^@/layouts/",
+    "^@/components/",
+    "^@/ui/"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
