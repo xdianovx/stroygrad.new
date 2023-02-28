@@ -1,0 +1,40 @@
+.section {
+  @apply mt-[142px] h-[1506px];
+}
+
+.wrap {
+  display: flex;
+  @apply relative;
+}
+
+.create__cards {
+  right: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 870px;
+  position: absolute;
+  gap: 48px;
+}
+
+.create__card {
+  width: 410px;
+  height: 522px;
+  position: relative;
+  img {
+    @apply block object-cover;
+  }
+
+  &:nth-child(2) {
+    margin-top: 196px;
+  }
+
+  &:nth-child(3) {
+    margin-top: -196px;
+  }
+}
+
+.text {
+  display: block;
+  height: 100vh;
+  position: relative;
+}

@@ -74,18 +74,28 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
   ]
 
   return (
-    <section className={cn(s.section, className, 'mb-80')} data-scroll-section>
+    <section
+      className={cn(s.section, className, 'mb-80')}
+      data-scroll-section
+      data-scroll-section-inview
+      data-persistent
+      id="fix"
+    >
       <div className="container">
         <div
-          className="flex justify-between items-end h-screen pb-60 pointer-events-none relative z-[1]"
+          className="flex justify-between items-end h-screen pb-60 pointer-events-none relative z-[0]"
           data-scroll
+          data-scroll-sticky
+          data-scroll-target="#fix"
         >
           <h2 className={cn(s.title, '')}>{title}</h2>
-          <LinkCircle
-            link="/projects"
-            text="Все проекты"
-            className="pointer-events-auto"
-          />
+
+          <div className="flex items-end">
+            <span className="text-lg leading-none text-[60px] font-light">
+              35+
+            </span>
+            <p className="leading-none mb-2">проектов</p>
+          </div>
         </div>
 
         <div className={s.cards}>
@@ -94,17 +104,27 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
               <div className={s.card__image}>
                 <Image src={item.img} fill alt={item.title} />
               </div>
-              <p className={s.card__title}>{item.title}</p>
-              <div className="flex mt-6 gap-6">
-                {item.params.map((item) => (
-                  <>
-                    <p>{item}</p>
-                    <div className="last-of-type:hidden">/</div>
-                  </>
-                ))}
+              <div
+                className={cn(
+                  s.card__info,
+                  'bg-[#000]/[.5] h-full flex  justify-center flex-col text-white gap-[84px] pl-[100px]',
+                )}
+              >
+                <p className={s.card__title}>{item.title}</p>
+                <div className="flex mt-6 gap-8">
+                  {item.params.map((item) => (
+                    <p className="text-xl">{item}</p>
+                  ))}
+                </div>
               </div>
             </Link>
           ))}
+
+          <LinkCircle
+            link="/projects"
+            text="Все проекты"
+            className="pointer-events-auto ml-auto"
+          />
         </div>
       </div>
     </section>
