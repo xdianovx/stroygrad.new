@@ -31,7 +31,7 @@ export const Navigation = ({ className, isOpen, setIsOpen }: iNavigation) => {
 
   return (
     <motion.nav
-      className={cn(s.nav, className)}
+      className={cn(s.nav, className, 'dark:bg-black dark:text-white')}
       variants={variants}
       animate={isOpen ? 'open' : 'closed'}
       initial="closed"

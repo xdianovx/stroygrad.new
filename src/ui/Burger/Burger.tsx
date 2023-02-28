@@ -89,12 +89,12 @@ export const Burger = ({ className, isOpen, setIsOpen }: iBurger) => {
       onClick={toggleBurger}
     >
       <motion.div
-        className={s.top}
+        className={cn(s.top, 'dark:bg-white')}
         variants={variantsTop}
         animate={openControlTop}
       ></motion.div>
       <motion.div
-        className={s.bottom}
+        className={cn(s.bottom, 'dark:bg-white')}
         variants={variantsBottomHover}
         animate={openControlBottom}
       ></motion.div>

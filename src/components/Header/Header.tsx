@@ -10,12 +10,6 @@ import { Burger, Logo, ThemeChanger } from '@/ui/index'
 export const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
-  useEffect(() => {
-    isNavOpen
-      ? (document.querySelector('main').style.overflow = 'hidden')
-      : (document.querySelector('main').style.overflow = 'auto')
-  }, [isNavOpen])
-
   return (
     <header className={s.header} data-scroll-section>
       <Navigation isOpen={isNavOpen} setIsOpen={setIsNavOpen} />

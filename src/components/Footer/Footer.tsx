@@ -49,9 +49,9 @@ export const Footer = () => {
   const worktimeText = 'Работаем\nкаждый день с 09:00 - 19:00'
 
   return (
-    <footer className="bg-black dark:bg-black mt-[160px]" data-scroll-section>
+    <footer className="bg-black dark:bg-white mt-[160px]" data-scroll-section>
       <div className={s.top}>
-        <div className={s.top__wrap}>
+        <div className={cn(s.top__wrap, 'dark:text-black')}>
           <Marquee loop={10} gradient={false} className={s.top__warquee}>
             {topMarquee.map((item, idx) => (
               <div className={s.top__item} key={+idx}>
@@ -73,7 +73,7 @@ export const Footer = () => {
               <div className={s.marquee__item} key={+idx}>
                 {item}
               </div>
-              <LogoSvg className="" />
+              <LogoSvg className="dark:fill-black" />
             </>
           ))}
         </Marquee>
@@ -84,22 +84,22 @@ export const Footer = () => {
           <nav>
             {links.map((item) => (
               <Link
-                className={cn(s.link, 'relative group')}
+                className={cn(s.link, 'relative group dark:text-black')}
                 href={item.to}
                 key={+item.id}
               >
-                <div className="absolute top-0 left-0 w-full h-0 bg-white group-hover:h-full transition-s duration-500 ease-[cubic-bezier(.77,.14,.11,.88)] z-[1]"></div>
-                <p className="group-hover:text-black relative z-[2]">
+                <div className="absolute top-0 left-0 w-full h-0 bg-white dark:bg-black group-hover:h-full transition-s duration-500 ease-[cubic-bezier(.77,.14,.11,.88)] z-[1]"></div>
+                <p className="group-hover:text-black dark:group-hover:text-white relative z-[2]">
                   {item.title}
                 </p>
-                <span className="group-hover:text-black relative z-[2]">
+                <span className="group-hover:text-black dark:group-hover:text-white relative z-[2]">
                   {item.num}
                 </span>
               </Link>
             ))}
           </nav>
         </div>
-        <div className={s.right}>
+        <div className={cn(s.right, 'dark:text-black')}>
           <div className={s.right__wrap}>
             <div className={s.time}>{worktimeText}</div>
             <div className={s.phones}>

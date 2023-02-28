@@ -12,7 +12,7 @@ export interface iLogo {
 export const Logo = ({ className }: iLogo) => {
   return (
     <Link href="/" className={cn(className)}>
-      <LogoSvg />
+      <LogoSvg className="dark:fill-white fill-black" />
     </Link>
   )
 }

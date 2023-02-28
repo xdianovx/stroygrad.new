@@ -91,8 +91,18 @@ export default function App({ Component, pageProps }: AppProps) {
         }
         containerRef={containerRef}
       >
-        <main data-scroll-container ref={containerRef}>
-          <Component {...pageProps} />
+        <main
+          data-scroll-container
+          ref={containerRef}
+          className="dark:bg-black"
+        >
+          <ThemeProvider
+            defaultTheme="light"
+            themes={['light', 'dark']}
+            attribute="class"
+          >
+            <Component {...pageProps} />
+          </ThemeProvider>
         </main>
       </LocomotiveScrollProvider>
     </>
