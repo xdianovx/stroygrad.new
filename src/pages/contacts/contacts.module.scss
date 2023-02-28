@@ -1,0 +1,15 @@
+.hero {
+  height: calc(100vh - 137px);
+  padding-bottom: 155px;
+
+  :global(.container) {
+    height: 100%;
+  }
+
+  .hero__title {
+    font-size: 280px !important;
+  }
+}
+
+.cabinet__item {
+}

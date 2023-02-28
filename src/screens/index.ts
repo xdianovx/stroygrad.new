@@ -1,3 +1,4 @@
+export { Fillial } from './Fillial/Fillial'
 export { NumSection } from './NumSection/NumSection'
 export { ComplexSolutions } from './ComplexSolutions/ComplexSolutions'
 export { Accordition } from './Accordition/Accordition'

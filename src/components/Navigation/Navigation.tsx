@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import cn from 'classnames'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 import s from './Navigation.module.scss'
 

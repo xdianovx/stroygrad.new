@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import s from './Header.module.scss'
 
@@ -9,6 +9,12 @@ import { Burger, Logo, ThemeChanger } from '@/ui/index'
 
 export const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
+
+  useEffect(() => {
+    isNavOpen
+      ? (document.querySelector('main').style.overflow = 'hidden')
+      : (document.querySelector('main').style.overflow = 'auto')
+  }, [isNavOpen])
 
   return (
     <header className={s.header} data-scroll-section>
