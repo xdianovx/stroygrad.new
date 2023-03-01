@@ -37,12 +37,12 @@ export const Navigation = ({ className, isOpen, setIsOpen }: iNavigation) => {
       initial="closed"
       transition={{ default: { ease: 'linear' }, stiffness: 100 }}
     >
-      <div className={s.wrap}>
+      <div className={cn(s.wrap, 'dark:hover:text-white')}>
         {links.map((item) => (
           <Link
             href={item.link}
             key={item.id}
-            className={cn(s.card, s.card__link)}
+            className={cn(s.card, s.card__link, 'hover:opacity-1')}
           >
             <p className={s.card__title}>{item.title}</p>
             <p className={s.card__num}>/{item.num}</p>

@@ -1,65 +1,65 @@
 @import '@/styles/vars';
 
 .nav {
-	position: absolute;
-	width: 100%;
-	top: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
 
-	height: 100vh;
-	background: $white;
-	z-index: 2;
+  height: 100vh;
+  background: $white;
+  z-index: 2;
 }
 
 .wrap {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	height: 100%;
-	&:hover {
-		.card__link {
-			color: #bfbfbf;
-		}
-	}
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  &:hover {
+    .card__link {
+      color: #bfbfbf;
+    }
+  }
 
-	.card__link {
-		&:hover {
-			opacity: 1;
-			color: $text;
-		}
-	}
+  .card__link {
+    &:hover {
+      opacity: 1;
+      color: $text;
+    }
+  }
 }
 
 .card {
-	border-bottom: 1px solid $strokeLight;
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
-	padding-bottom: 30px;
-	transition: all 0.2s ease;
+  border-bottom: 1px solid $strokeLight;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  transition: all 0.2s ease;
 
-	&:nth-child(odd) {
-		border-right: 1px solid $strokeLight;
-		padding-left: 120px;
-		padding-right: 70px;
-	}
+  &:nth-child(odd) {
+    border-right: 1px solid $strokeLight;
+    padding-left: 120px;
+    padding-right: 70px;
+  }
 
-	&:nth-child(even) {
-		padding-left: 70px;
-		padding-right: 120px;
-	}
+  &:nth-child(even) {
+    padding-left: 70px;
+    padding-right: 120px;
+  }
 
-	&:nth-child(5) {
-		border-bottom: none;
-	}
+  &:nth-child(5) {
+    border-bottom: none;
+  }
 
-	&:nth-child(6) {
-		border-bottom: none;
-	}
+  &:nth-child(6) {
+    border-bottom: none;
+  }
 }
 
 .card__title {
-	font-weight: 400;
-	font-size: 60px;
-	line-height: 100%;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 100%;
 }
 
 .card__num {
