@@ -1,3 +1,4 @@
+export { TextBlock } from './TextBlock/TextBlock'
 export { Fillial } from './Fillial/Fillial'
 export { NumSection } from './NumSection/NumSection'
 export { ComplexSolutions } from './ComplexSolutions/ComplexSolutions'

@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-import { Footer } from '../components'
 import {
   Accordition,
   ComplexSolutions,
@@ -8,12 +7,10 @@ import {
   NumSection,
   ProjectScroll,
   ScrollImage,
+  TextBlock,
 } from '../screens'
-import { TextBlock } from '@/screens/TextBlock/TextBlock'
 
 import MainLayout from '@/layouts/MainLayout'
-
-import { Header } from '@/components/Header/Header'
 
 export default function Home() {
   return (
@@ -26,13 +23,8 @@ export default function Home() {
       </Head>
 
       <MainLayout>
-        {/*
         <IndexHero />
-        */}
-
-        {/*
         <ScrollImage />
-        */}
 
         {/*   <TextBlock
           title="Мы стремимся стать одним из крупнейших строительно-инвестиционных холдингов федерального и международного уровня."

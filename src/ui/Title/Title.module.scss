@@ -1,13 +1,37 @@
 .h1 {
-	font-weight: 400;
-	font-size: 300px;
-	line-height: 90%;
-	letter-spacing: -0.03em;
+  font-weight: 400;
+  font-size: 300px;
+  line-height: 90%;
+  letter-spacing: -0.03em;
 }
 
-@media screen and (max-width: 1680px) {
-	.h1 {
-		font-size: 260px;
-		line-height: 95%;
-	}
+@screen xl {
+  .h1 {
+    font-size: 260px;
+    line-height: 95%;
+  }
+}
+
+@screen lg {
+  .h1 {
+    font-size: 160px;
+  }
+}
+
+@screen md {
+  .h1 {
+    font-size: 120px;
+  }
+}
+
+@screen sm {
+  .h1 {
+    font-size: 86px;
+  }
+}
+
+@screen xs {
+  .h1 {
+    font-size: 60px;
+  }
 }

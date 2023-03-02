@@ -1,8 +1,32 @@
 .section {
-	margin-top: 290px;
+  margin-top: 290px;
 }
 
 .wrap {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+@screen xl {
+  .section {
+    margin-top: 200px;
+  }
+}
+
+@screen lg {
+  .section {
+    margin-top: 160px;
+  }
+}
+
+@screen md {
+  .section {
+    margin-top: 120px;
+  }
+}
+
+@screen sm {
+  .section {
+    margin-top: 140px;
+  }
 }
