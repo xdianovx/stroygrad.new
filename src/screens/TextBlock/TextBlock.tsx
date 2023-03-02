@@ -16,7 +16,9 @@ export const TextBlock = ({ text, title, className }: iTextBlock) => {
       <div className="container">
         <div className="flex flex-col">
           <TextLg text={title} />
-          <p className="max-w-[340px] mx-auto mt-12">{text}</p>
+          <p className="max-w-[340px] mx-auto mt-12 md:text-sm md:mt-8 md:max-w-none">
+            {text}
+          </p>
         </div>
       </div>
     </section>
