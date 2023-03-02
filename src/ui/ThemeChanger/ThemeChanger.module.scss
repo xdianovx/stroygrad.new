@@ -41,3 +41,23 @@
     height: 28px;
   }
 }
+
+@screen md {
+  .light {
+    width: 15px;
+    height: 15px;
+    &.active {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .dark {
+    width: 15px;
+    height: 15px;
+    &.active {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

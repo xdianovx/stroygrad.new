@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import s from './Header.module.scss'
 

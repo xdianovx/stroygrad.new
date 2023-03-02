@@ -27,3 +27,15 @@
   position: relative;
   z-index: 3;
 }
+
+@screen xl {
+  .header {
+    @apply pt-10;
+  }
+}
+
+@screen md {
+  .header {
+    @apply pt-4;
+  }
+}

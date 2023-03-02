@@ -16,11 +16,6 @@ export const ThemeChanger = ({ className }: iThemeChanger) => {
     setTheme('light')
   }, [])
 
-  const variants = {
-    active: {},
-    inactive: {},
-  }
-
   return (
     <motion.div className={cn(s.wrap, className)}>
       <div
