@@ -2,12 +2,13 @@ import Image from 'next/image'
 
 import ArrowSvg from './arrow.svg'
 import cn from 'classnames'
+import { log } from 'console'
 import { Variants, motion } from 'framer-motion'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import s from './Accordition.module.scss'
 
-import { TextMd } from '@/ui/index'
+import { LinkCircle, TextMd } from '@/ui/index'
 
 export interface iAccorditionItem {
   title: string
@@ -15,19 +16,26 @@ export interface iAccorditionItem {
   link: string
   image: any
   data: any
+  id: number
 }
 
 export const AccordionItem = ({
   title,
   num,
   image,
+  link,
   data,
 }: iAccorditionItem): JSX.Element => {
-  const [isHover, setIsHover] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-
-  const openHandler = () => {
+  const ref = useRef<HTMLDivElement>(null)
+  const openHandler = (e: any) => {
     setIsOpen(!isOpen)
+    e.preventDefault()
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    })
   }
 
   const variants: Variants = {
@@ -44,6 +52,8 @@ export const AccordionItem = ({
 
   return (
     <div
+      ref={ref}
+      id={link}
       className={cn(
         s.item,
         'border-t border-gray px-12 py-4 last-of-type:border-b relative  group  cursor-pointer',
@@ -51,7 +61,7 @@ export const AccordionItem = ({
           ['bg-black']: isOpen,
         },
       )}
-      onClick={openHandler}
+      onClick={(e) => openHandler(e)}
     >
       <div className="absolute top-0 left-0 w-full h-0 bg-black group-hover:h-full transition-all duration-500 ease-[cubic-bezier(.77,.14,.11,.88)] z-[1]"></div>
 
@@ -96,14 +106,14 @@ export const AccordionItem = ({
           </div>
           <motion.div
             className={cn(s.item__content, 'pointer-events-none  text-white', {
-              ['mt-10']: isOpen,
+              ['mt-[120px]']: isOpen,
             })}
             variants={variants}
             initial="closed"
             animate={isOpen ? 'open' : 'closed'}
           >
             <div className="grid-2">
-              <div className="relative w-[300px] h-[300px]">
+              <div className="relative w-[300px] h-[300px] mx-auto">
                 {isOpen && (
                   <Image src={image} fill alt={title} className="block " />
                 )}
@@ -113,9 +123,33 @@ export const AccordionItem = ({
                   text="Оформляйте полис ДМС от партнера «Альфа-страхование», и
                   получайте своевременную и качественную медицинскую помощь с
                   выгодой 30%. Сумму страхового взноса можно включить в
-                ипотечный платеж и больше не беспокоиться о дополнительных
+                  ипотечный платеж и больше не беспокоиться о дополнительных
                   тратах."
                 />
+
+                <div className="flex mt-[120px] gap-20">
+                  <div className="flex flex-col gap-[22px]">
+                    <span className="block">01</span>
+                    <p>Надежные партнеры</p>
+                  </div>
+
+                  <div className="flex flex-col gap-[22px]">
+                    <span className="block">02</span>
+                    <p>Широкий выбор услуг</p>
+                  </div>
+
+                  <div className="flex flex-col gap-[22px]">
+                    <span className="block">03</span>
+                    <p>Стоимость включена в ипотеку</p>
+                  </div>
+
+                  <div className="flex flex-col gap-[22px]">
+                    <span className="block">04</span>
+                    <p>Широкая сеть клиник</p>
+                  </div>
+                </div>
+
+                <LinkCircle link="#" text="Кнопка" className="mt-16" />
               </div>
             </div>
           </motion.div>
