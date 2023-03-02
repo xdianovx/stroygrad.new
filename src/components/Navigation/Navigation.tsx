@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import cn from 'classnames'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
 
 import s from './Navigation.module.scss'
 
@@ -12,7 +11,7 @@ export interface iNavigation {
   setIsOpen: any
 }
 
-export const Navigation = ({ className, isOpen, setIsOpen }: iNavigation) => {
+export const Navigation = ({ className, isOpen }: iNavigation) => {
   const links = [
     { id: 1, title: 'О нас ', link: 'about', num: '01' },
     { id: 2, title: 'Новости', link: 'news', num: '02' },
