@@ -77,12 +77,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          smartphone: {
-            smooth: true,
-          },
-          tablet: {
-            smooth: true,
-          },
         }}
         watch={[]}
         location={asPath}
