@@ -1,31 +1,30 @@
-import s from "./team.module.scss";
+import Head from 'next/head'
 
-import cn from "classnames";
+import s from './team.module.scss'
 
-import Head from "next/head";
-import MainLayout from "../../src/layouts/MainLayout";
-import { LinkCircle, TextLg, TextMd, Title } from "../../src/ui";
-import { TeamCard } from "../../src/components";
+import MainLayout from '@/layouts/MainLayout'
+
+import { LinkCircle, TextLg, TextMd, Title } from '@/ui/index'
 
 export default function Team() {
-  const title = "Сила\nкомпании";
+  const title = 'Сила\nкомпании'
   const subTitle =
-    "Мы стремимся стать одним из\nкрупнейших строительно-\nинвестиционных холдингов\nфедерального и международного\nуровня.";
+    'Мы стремимся стать одним из\nкрупнейших строительно-\nинвестиционных холдингов\nфедерального и международного\nуровня.'
   const teamData = [
     {
       id: 1,
-      name: "Колосова\nОльга Ивановна",
+      name: 'Колосова\nОльга Ивановна',
       position: 'Генеральный директор\nООО "Стройград"',
-      image: "/img/team/1.jpg",
+      image: '/img/team/1.jpg',
     },
     {
       id: 2,
-      name: "Гукалов Андрей Александрович",
+      name: 'Гукалов Андрей Александрович',
       position: 'Генеральный директор\nООО "Стройград"',
-      image: "/img/team/2.jpg",
+      image: '/img/team/2.jpg',
     },
-  ];
-  const workText = "Свободные\nвакансии нашей\nкомпании ";
+  ]
+  const workText = 'Свободные\nвакансии нашей\nкомпании '
   return (
     <>
       <Head>
@@ -42,16 +41,20 @@ export default function Team() {
 
         <section className="mt-[110px]">
           <div className="container">
-            <TextLg>{subTitle}</TextLg>
+            <TextLg text={subTitle} />
           </div>
         </section>
 
         <section className="mt-[159px]">
           <div className="container">
             <div className="grid grid-cols-2 gap-[26px]">
+              {/*
               {teamData.map((item) => (
-                <TeamCard data={item} key={item.id} />
+
+          <TeamCard data={item} key={item.id} />
               ))}
+
+          */}
             </div>
           </div>
         </section>
@@ -72,16 +75,18 @@ export default function Team() {
                 <p className="text-grayDark">Работа для вас</p>
               </div>
               <div>
-                <TextMd>{workText}</TextMd>
+                <TextMd text={workText} />
                 <p className="mt-20">(16+ свободных вакансий )</p>
-                <LinkCircle link="vacancy" className="mt-[104px]" size="lg">
-                  Посмотреть вакансии
-                </LinkCircle>
+                <LinkCircle
+                  link="vacancy"
+                  className="mt-[104px]"
+                  text="Посмотреть вакансии"
+                />
               </div>
             </div>
           </div>
         </section>
       </MainLayout>
     </>
-  );
+  )
 }
