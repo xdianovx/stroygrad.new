@@ -49,7 +49,7 @@ export const Footer = () => {
   const worktimeText = 'Работаем\nкаждый день с 09:00 - 19:00'
 
   return (
-    <footer className="bg-black dark:bg-white mt-[160px]" data-scroll-section data-scroll-sticky>
+    <footer className="bg-black dark:bg-white mt-[160px] overflow-hidden" data-scroll-section data-scroll-sticky>
       <div className={s.top}>
         <div className={cn(s.top__wrap, 'dark:text-black')}>
           <Marquee loop={10} gradient={false} className={s.top__warquee}>
