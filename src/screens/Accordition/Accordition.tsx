@@ -76,10 +76,10 @@ export const Accordition = ({
       <div className={s.top}>
         <div className="container">
           <div className={cn(s.wrap, 'grid-2')}>
-            <h2 className="text-gray">{title}</h2>
-            <div>
+            <h2 className={cn('text-gray')}>{title}</h2>
+            <div className="sm:mt-8">
               <TextMd text={text} />
-              {subtitle && <p className="mt-20">{subtitle}</p>}
+              {subtitle && <p className="mt-20 sm:mt-10">{subtitle}</p>}
             </div>
           </div>
         </div>
@@ -88,6 +88,7 @@ export const Accordition = ({
       <div className={s.bottom}>
         {data.map((item) => (
           <AccordionItem
+            key={item.id}
             image={item.image}
             title={item.title}
             num={item.num}

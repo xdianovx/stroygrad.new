@@ -47,3 +47,47 @@
   line-height: 1;
   letter-spacing: -0.04em;
 }
+
+@screen xl {
+  .title {
+    font-size: 200px;
+    line-height: 100%;
+  }
+}
+
+@screen lg {
+  .card {
+    height: 640px;
+  }
+  .title {
+    font-size: 164px;
+  }
+}
+
+@screen md {
+  .cards {
+    gap: 80px;
+  }
+  .card {
+    height: 480px;
+  }
+  .title {
+    font-size: 96px;
+  }
+}
+
+@screen sm {
+  .section {
+    margin-top: 90px;
+  }
+  .title {
+    font-size: 64px;
+  }
+  .cards {
+    gap: 64px;
+  }
+
+  .card {
+    height: 420px;
+  }
+}

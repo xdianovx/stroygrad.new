@@ -30,11 +30,10 @@ export default function Home() {
           text="Все это время «Стройград» стремительно развивался, выходил на новые рынки, наращивал собственную производственную базу, осваивал новые направления бизнеса."
           className="mt-[200px] lg:mt-[160px] md:mt-[120px] sm:mt-20"
         />
-        {/* <ProjectScroll className="mt-[380px]" /> */}
+        <ProjectScroll className="mt-[380px] sm:mt-12" />
 
-        {/*
-<Accordition
-          className="mt-[80px]"
+        <Accordition
+          className="mt-[80px] sm:mt-12"
           title={'Сервисы для\nсчастливой жизни'}
           text="Мы стремимся стать одним из крупнейших строительно-инвестиционных холдингов федерального уровня."
           subtitle={
@@ -42,7 +41,6 @@ export default function Home() {
           }
         />
 
-*/}
         {/* <ComplexSolutions
 				title={'Комплексные\nрешения'}
 				subtitle={

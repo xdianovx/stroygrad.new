@@ -40,9 +40,35 @@
   }
 }
 
+.image__content {
+  display: block;
+}
+
 .circle {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   margin-left: auto;
+}
+
+@screen xl {
+  .item__title {
+    font-size: 96px;
+  }
+}
+
+@screen lg {
+  .item__title {
+    font-size: 64px;
+  }
+}
+
+@screen sm {
+  .item__title {
+    font-size: 32px;
+  }
+
+  .item {
+    padding: 24px 0;
+  }
 }

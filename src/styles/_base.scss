@@ -67,3 +67,21 @@ p {
     padding: 0 15px;
   }
 }
+
+@screen lg {
+  .grid-2 {
+    grid-template-columns: 1fr 720px;
+  }
+}
+
+@screen md {
+  .grid-2 {
+    grid-template-columns: 1fr 640px;
+  }
+}
+
+@screen sm {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

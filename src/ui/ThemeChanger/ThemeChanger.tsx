@@ -1,7 +1,6 @@
 import cn from 'classnames'
 import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
-import { useEffect } from 'react'
 
 import s from './ThemeChanger.module.scss'
 
@@ -11,10 +10,6 @@ export interface iThemeChanger {
 
 export const ThemeChanger = ({ className }: iThemeChanger) => {
   const { theme, setTheme } = useTheme()
-
-  useEffect(() => {
-    setTheme('light')
-  }, [])
 
   return (
     <motion.div className={cn(s.wrap, className)}>

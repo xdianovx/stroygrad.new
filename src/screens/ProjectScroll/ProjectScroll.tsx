@@ -75,7 +75,7 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
 
   return (
     <section
-      className={cn(s.section, className, 'mb-80')}
+      className={cn(s.section, className, 'mb-80 sm:mb-20')}
       data-scroll-section
       data-scroll-section-inview
       data-persistent
@@ -90,11 +90,11 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
         >
           <h2 className={cn(s.title, '')}>{title}</h2>
 
-          <div className="flex items-end">
-            <span className="text-lg leading-none text-[60px] font-light">
+          <div className="flex items-end md:items-center md:hidden">
+            <span className="leading-none text-[60px] font-light md:text-[18px]">
               35+
             </span>
-            <p className="leading-none mb-2">проектов</p>
+            <p className="leading-none mb-2 md:mb-0">проектов</p>
           </div>
         </div>
 
@@ -112,8 +112,8 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
               >
                 <p className={s.card__title}>{item.title}</p>
                 <div className="flex mt-6 gap-8">
-                  {item.params.map((item) => (
-                    <p className="text-xl">{item}</p>
+                  {item.params.map((item, idx) => (
+                    <p key={idx} className="text-xl">{item}</p>
                   ))}
                 </div>
               </div>
