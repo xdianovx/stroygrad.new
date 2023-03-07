@@ -8,6 +8,7 @@ module.exports = {
         black: '#1f1f1f',
         gray: '#858585',
         grayBorder: '#C8C8C8',
+        grayLight: '#EBEBEB',
       },
     },
     container: {
@@ -24,7 +25,7 @@ module.exports = {
     },
   },
   plugins: [
-    function({ addComponents }) {
+    function ({ addComponents }) {
       addComponents({
         '.container': {
           maxWidth: '1680px',

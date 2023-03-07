@@ -167,18 +167,18 @@ export default function Team() {
           </div>
         </section>
 
-        <section className="mt-[78px]" data-scroll-section>
+        <section className="mt-[78px] xl:mt-16 lg:mt-8" data-scroll-section>
           <div>
             <div className="container">
-              <div className="flex flex-col items-end ">
-                <p>Выберите год:</p>
-                <div className="flex gap-[22px] mt-[20px] text-gray font-light text-[28px]">
+              <div className="flex flex-col items-end sm:items-start">
+                <p className="lg:text-sm">Выберите год:</p>
+                <div className="flex gap-[22px] mt-[20px] text-gray font-light text-[28px] xl:text-[18px] xl:mt-3 xl:leading-none sm:text-sm sm:gap-3">
                   <div className="cursor-pointer duration-200 hover:text-black">
                     Все года
                   </div>
                   {years.map((item, idx) => (
                     <div
-                      className="cursor-pointer duration-200 hover:text-black"
+                      className="cursor-pointer duration-200 hover:text-black "
                       key={idx}
                     >
                       {item}
@@ -190,15 +190,17 @@ export default function Team() {
           </div>
 
           <div>
-            <div className="mt-[78px]">
+            <div className="mt-[78px] lg:mt-6">
               <div className="container">
-                <p className="text-right">Выберите тему:</p>
+                <p className="text-right lg:text-sm sm:text-left">
+                  Выберите тему:
+                </p>
               </div>
-              <div className="flex gap-[22px] mt-[20px] ">
+              <div className="flex gap-[22px] mt-[20px] xl:text-[18px] xl:mt-3 xl:gap-4">
                 <Marquee loop={20} gradient={false}>
                   {tags.map((item, idx) => (
                     <div
-                      className="text-3xl cursor-pointer mx-12 font-light text-gray duration-200 hover:text-black"
+                      className="text-3xl cursor-pointer mx-12 font-light text-gray duration-200 hover:text-black xl:text-[18px] xl:mx-4 xl:leading-none sm:text-sm sm:mx-2"
                       key={idx}
                     >
                       #{item}
@@ -210,10 +212,17 @@ export default function Team() {
           </div>
         </section>
 
-        <section className="mt-[75px]" data-scroll-section>
+        <section className="mt-[75px] " data-scroll-section>
           <div className="container">
-            <p className="leading-[120%] text-[120px]">2022</p>
-            <div className={cn(s.cards, 'grid grid-cols-4 gap-5  mt-[37px]')}>
+            <p className="leading-[120%] text-[120px] xl:text-[96px] md:text-[86px] sm:text-[58px]">
+              2022
+            </p>
+            <div
+              className={cn(
+                s.cards,
+                'grid grid-cols-4 gap-5  mt-[37px] xl:mt-8 xl:gap-4 lg:grid-cols-3 md:grid-cols-2 md:mt-4 sm:grid-cols-1',
+              )}
+            >
               {newsPosts.map((item) => (
                 <NewsCard key={item.id} data={item} className={s.card} />
               ))}
@@ -221,10 +230,17 @@ export default function Team() {
           </div>
         </section>
 
-        <section className="mt-[320px]" data-scroll-section>
+        <section className="mt-[350px]" data-scroll-section>
           <div className="container">
-            <p className="leading-[120%] text-[120px]">2021</p>
-            <div className={cn(s.cards, 'grid grid-cols-4 gap-5  mt-[37px]')}>
+            <p className="leading-[120%] text-[120px] xl:text-[96px] md:text-[86px] sm:text-[58px]">
+              2021
+            </p>
+            <div
+              className={cn(
+                s.cards,
+                'grid grid-cols-4 gap-5  mt-[37px] xl:mt-8 xl:gap-4 lg:grid-cols-3 md:grid-cols-2 md:mt-4 sm:grid-cols-1',
+              )}
+            >
               {newsPosts.map((item) => (
                 <NewsCard key={item.id} data={item} className={s.card} />
               ))}

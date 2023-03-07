@@ -7,6 +7,7 @@ export interface iInput {
   label: string
   className?: string | string[]
   errors?: any
+  placeholder: string
   type: 'text' | 'email' | 'phone'
   props?: any
 }
@@ -15,6 +16,7 @@ export const Input = ({
   label,
   className,
   errors,
+  placeholder,
   type,
   ...props
 }: iInput): JSX.Element => {
@@ -44,6 +46,7 @@ export const Input = ({
             className={cn(s.input, 'border-b', 'border-gray')}
             onChange={handleInput}
             type="text"
+            placeholder={placeholder}
             value={inputValue}
           />
         </div>
@@ -60,6 +63,7 @@ export const Input = ({
           <input
             className={cn(s.input, 'border-b', 'border-gray')}
             onChange={handleInput}
+            placeholder={placeholder}
             type="text"
             value={inputValue}
           />
