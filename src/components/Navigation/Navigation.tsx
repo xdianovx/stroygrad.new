@@ -13,11 +13,11 @@ export interface iNavigation {
 
 export const Navigation = ({ className, isOpen }: iNavigation) => {
   const links = [
-    { id: 1, title: 'О нас ', link: 'about', num: '01' },
-    { id: 2, title: 'Новости', link: 'news', num: '02' },
-    { id: 3, title: 'Проекты ', link: 'projects', num: '03' },
-    { id: 4, title: 'Контакты ', link: 'contacts', num: '04' },
-    { id: 5, title: 'Вакансии', link: 'vacancy', num: '05' },
+    { id: 1, title: 'О нас ', link: '/about', num: '01' },
+    { id: 2, title: 'Новости', link: '/news', num: '02' },
+    { id: 3, title: 'Проекты ', link: '/projects', num: '03' },
+    { id: 4, title: 'Контакты ', link: '/contacts', num: '04' },
+    { id: 5, title: 'Вакансии', link: '/vacancy', num: '05' },
   ]
   const variants = {
     open: {

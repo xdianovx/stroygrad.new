@@ -7,7 +7,7 @@ export interface iInput {
   label: string
   className?: string | string[]
   errors?: any
-  placeholder: string
+  placeholder?: string
   type: 'text' | 'email' | 'phone'
   props?: any
 }
@@ -48,6 +48,7 @@ export const Input = ({
             type="text"
             placeholder={placeholder}
             value={inputValue}
+            {...props}
           />
         </div>
       )
@@ -55,6 +56,7 @@ export const Input = ({
     case 'email':
       return (
         <div
+          onMouseEnter={handleInput}
           className={cn(s.wrap, className, {
             [s.active]: isOpen,
           })}
@@ -66,6 +68,7 @@ export const Input = ({
             placeholder={placeholder}
             type="text"
             value={inputValue}
+            {...props}
           />
         </div>
       )

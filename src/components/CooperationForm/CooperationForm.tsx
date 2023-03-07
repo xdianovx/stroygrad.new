@@ -1,31 +1,30 @@
-import s from "./CooperationForm.module.scss";
+import { ButtonArrow, Input, TextMd } from '../../ui'
+import { Checkbox } from '../../ui/Checkbox/Checkbox'
+import cn from 'classnames'
 
-import cn from "classnames";
-
-import { ButtonArrow, Input, TextMd } from "../../ui";
-import { Checkbox } from "../../ui/Checkbox/Checkbox";
+import s from './CooperationForm.module.scss'
 
 export interface iCooperationForm {
-  className?: string;
+  className?: string
 }
 
 export const CooperationForm = ({ className }: iCooperationForm) => {
   const text =
-    "Приглашаем к сотрудничеству агентства недвижимости и независимых риелторов!";
-  const subTitle = "Мы за прочные\nи взаимовыгодные отношения";
+    'Приглашаем к сотрудничеству агентства недвижимости и независимых риелторов!'
+  const subTitle = 'Мы за прочные\nи взаимовыгодные отношения'
   const checkText =
-    "Нажимая на кнопку «Оставить заявку», вы даете\nсогласие на обработку персональных данных";
+    'Нажимая на кнопку «Оставить заявку», вы даете\nсогласие на обработку персональных данных'
 
   return (
-    <section className={cn(className)}>
+    <section className={cn(className)} data-scroll-section>
       <div className="container">
         <div className="grid grid-cols-[1fr_972px]">
           <div>
-            <p>Сотрудничество</p>
+            <p className="text-gray">Сотрудничество</p>
           </div>
 
           <div>
-            <TextMd>{text}</TextMd>
+            <TextMd text={text} />
             <p className="mt-[58px]">{subTitle}</p>
 
             <form className="mt-[147px] flex flex-col gap-12">
@@ -42,5 +41,5 @@ export const CooperationForm = ({ className }: iCooperationForm) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

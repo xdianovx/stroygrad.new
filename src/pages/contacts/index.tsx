@@ -50,11 +50,14 @@ export default function Contacts() {
       </Head>
 
       <MainLayout>
-        <section className={cn(s.hero, 'border-b', 'border-gray')}>
+        <section
+          className={cn(s.hero, 'border-b', 'border-gray')}
+          data-scroll-section
+        >
           <div className="container ">
             <div className="h-full flex items-end ">
               <div className="w-full">
-                <p className="mb-24 leading-none">Главный офис</p>
+                <p className="mb-16 leading-none">Главный офис</p>
                 <div className="flex items-end ">
                   <Title tag="h1" className={s.hero__title}>
                     Ставрополь
@@ -66,7 +69,7 @@ export default function Contacts() {
           </div>
         </section>
 
-        <section className={s.cabinet}>
+        <section className={s.cabinet} data-scroll-section>
           <div className={cn(s.cabinet__item, 'border-b', 'border-gray')}>
             <div className="container">
               <div className="grid grid-cols-3  min-h-[290px] pt-[90px]">
@@ -108,7 +111,7 @@ export default function Contacts() {
           </div>
         </section>
 
-        <section className="mt-[242px]">
+        <section className="mt-[242px]" data-scroll-section>
           {fillials.map((item) => (
             <Fillial
               key={item.id}
