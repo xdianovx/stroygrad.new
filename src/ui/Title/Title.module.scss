@@ -5,10 +5,24 @@
   letter-spacing: -0.03em;
 }
 
+.h2 {
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: -0.03em;
+  color: #1f1f1f;
+  white-space: pre-line;
+}
+
 @screen xl {
   .h1 {
     font-size: 260px;
     line-height: 95%;
+  }
+
+  .h2 {
+    font-size: 64px;
+    line-height: 120%;
   }
 }
 
@@ -16,11 +30,19 @@
   .h1 {
     font-size: 160px;
   }
+
+  .h2 {
+    font-size: 56px;
+  }
 }
 
 @screen md {
   .h1 {
     font-size: 120px;
+  }
+
+  .h2 {
+    font-size: 32px;
   }
 }
 

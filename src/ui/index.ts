@@ -1,3 +1,5 @@
+export { ContentImage } from './ContentImage/ContentImage'
+export { TextSm } from './TextSm/TextSm'
 export { Checkbox } from './Checkbox/Checkbox'
 export { PinLink } from './PinLink/PinLink'
 export { Input } from './Input/Input'

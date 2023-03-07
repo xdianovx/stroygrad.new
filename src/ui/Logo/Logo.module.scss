@@ -3,9 +3,9 @@
   height: 46px;
 }
 
-@screen md {
+@screen lg {
   .logo {
-    width: 80px;
+    width: 64px;
     height: auto;
     svg {
       @apply block;

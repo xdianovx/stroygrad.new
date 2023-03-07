@@ -52,5 +52,8 @@ export const Title = ({ className, tag, children }: iTitle): any => {
           ))}
         </motion.h1>
       )
+
+    case 'h2':
+      return <h2 className={cn(s.h2, className)}>{children}</h2>
   }
 }

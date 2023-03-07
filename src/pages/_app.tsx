@@ -10,6 +10,7 @@ import {
   LocomotiveScrollProvider,
   LocomotiveScrollProvider as RLSProvider,
 } from 'react-locomotive-scroll'
+import 'swiper/css/bundle'
 
 import '../styles/globals.scss'
 
