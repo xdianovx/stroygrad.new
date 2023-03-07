@@ -20,7 +20,11 @@ export const NewsCard = ({ data, className }: iNewsCard) => {
   return (
     <Link
       href={data.link}
-      className={cn(s.card, className, 'h-[534px] lg:h-[480px] sm:h-[410px]')}
+      className={cn(
+        s.card,
+        className,
+        'h-[534px] transition-all hover:scale-[0.96] lg:h-[480px] sm:h-[410px]',
+      )}
     >
       <div
         className={cn('relative h-full', {
