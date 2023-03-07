@@ -21,16 +21,18 @@ export const CompanyGroup = () => {
   return (
     <section className="" data-scroll-section>
       <div className="container">
-        <div className="grid grid-cols-[1fr_972px]">
+        <div className="grid grid-cols-[1fr_972px] lg:grid-cols-2 sm:grid-cols-1">
           <div>
-            <p className="text-grayDark text-sm">Группа компаний</p>
+            <p className="text-grayDark text-sm text-gray sm:mb-12">
+              Группа компаний
+            </p>
           </div>
 
           <div>
             <TextMd text={text} />
-            <p className="mt-[68px]">{subText}</p>
+            <p className="mt-[68px] sm:mt-6 sm:text-sm">{subText}</p>
 
-            <div className="grid grid-cols-2 mt-[177px] gap-[104px]">
+            <div className="grid grid-cols-2 mt-[177px] gap-[104px] sm:mt-[120px]">
               {companies.map((item, idx) => (
                 <div key={idx} className="relative">
                   <Image src={item} alt="Партнер" />

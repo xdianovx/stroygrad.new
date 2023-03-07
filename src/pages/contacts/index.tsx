@@ -57,12 +57,14 @@ export default function Contacts() {
           <div className="container ">
             <div className="h-full flex items-end ">
               <div className="w-full">
-                <p className="mb-16 leading-none">Главный офис</p>
-                <div className="flex items-end ">
-                  <Title tag="h1" className={s.hero__title}>
+                <p className="mb-16 leading-none lg:mb-8 md:text-sm md:mb-4 text-gray">
+                  Главный офис
+                </p>
+                <div className="flex items-end sm:items-center ">
+                  <Title tag="h1" className={cn(s.title)}>
                     Ставрополь
                   </Title>
-                  <PinLink className="ml-auto" />
+                  <PinLink className="ml-auto mb-4 sm:mb-0" />
                 </div>
               </div>
             </div>
@@ -70,39 +72,72 @@ export default function Contacts() {
         </section>
 
         <section className={s.cabinet} data-scroll-section>
-          <div className={cn(s.cabinet__item, 'border-b', 'border-gray')}>
+          <div
+            className={cn(
+              'border-b border-gray lg:pb-4 lg:pt-12 md:pt-8 md:pb-8',
+            )}
+          >
             <div className="container">
-              <div className="grid grid-cols-3  min-h-[290px] pt-[90px]">
-                <p className="text-[40px]">Отдел продаж</p>
+              <div className="grid grid-cols-3  min-h-[290px] pt-[90px] lg:grid-cols-2 lg:pt-0 md:min-h-0">
+                <p className="text-[40px] md:text-[28px] sm:text-sm">
+                  Отдел продаж
+                </p>
                 <div className="flex flex-col">
-                  <span className="mb-5 text-grayDark">Адрес:</span>
-                  <p className="text-xl">г. Ставрополь, ул. Чапаева, 4/1</p>
+                  <span className="mb-5 text-grayDark md:mb-2 md:text-sm">
+                    Адрес:
+                  </span>
+                  <p className="text-xl sm:text-[16px]">
+                    г. Ставрополь, ул. Чапаева, 4/1
+                  </p>
                 </div>
 
-                <div className="flex flex-col">
-                  <span className="mb-5 text-grayDark">Телефон:</span>
-                  <Link href="tel:+78652239033" className="text-xl mb-2">
+                <div className="flex flex-col lg:col-start-2 lg:mt-8">
+                  <span className="mb-5 text-grayDark md:mb-2  md:text-sm">
+                    Телефон:
+                  </span>
+                  <Link
+                    href="tel:+78652239033"
+                    className="text-xl mb-2 md:mb-1 sm:text-[16px] sm:leading-none sm:mb-4"
+                  >
                     8 (8652)-23-90-33
                   </Link>
-                  <Link href="tel:+79189488592" className="text-xl">
+                  <Link
+                    href="tel:+79189488592"
+                    className="text-xl sm:text-[16px] sm:leading-none"
+                  >
                     8 (918) 948-85-92
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className={cn(s.cabinet__item, 'border-b', 'border-gray')}>
+          <div
+            className={cn(
+              'border-b border-gray lg:pb-4 lg:pt-12 md:pt-8 md:pb-8',
+            )}
+          >
             <div className="container">
-              <div className="grid grid-cols-3  min-h-[290px] pt-[90px]">
-                <p className="text-[40px]">Представительство</p>
+              <div className="grid grid-cols-3  min-h-[290px] pt-[90px] lg:grid-cols-2 lg:pt-0 md:min-h-0">
+                <p className="text-[40px] md:text-[28px] sm:text-sm">
+                  Представительство
+                </p>
                 <div className="flex flex-col">
-                  <span className="mb-5 text-grayDark">Адрес:</span>
-                  <p className="text-xl">г. Ставрополь, ул. Чапаева, 4/1</p>
+                  <span className="mb-5 text-grayDark md:mb-2  md:text-sm">
+                    Адрес:
+                  </span>
+                  <p className="text-xl sm:text-[16px] sm:leading-none">
+                    г. Ставрополь, ул. Чапаева, 4/1
+                  </p>
                 </div>
 
-                <div className="flex flex-col">
-                  <span className="mb-5 text-grayDark">Телефон:</span>
-                  <Link href="tel:+78652230133" className="text-xl mb-2">
+                <div className="flex flex-col lg:col-start-2 lg:mt-8">
+                  <span className="mb-5 text-grayDark md:mb-2  md:text-sm">
+                    Телефон:
+                  </span>
+                  <Link
+                    href="tel:+78652230133"
+                    className="text-xl mb-2 md:mb-1 sm:text-[16px] sm:leading-none"
+                  >
                     8 (8652) 23 01 33
                   </Link>
                 </div>
@@ -126,7 +161,7 @@ export default function Contacts() {
 
         <CompanyGroup />
 
-        <CooperationForm className="mt-[600px]" />
+        {/* <CooperationForm className="mt-[600px]" /> */}
       </MainLayout>
     </>
   )
