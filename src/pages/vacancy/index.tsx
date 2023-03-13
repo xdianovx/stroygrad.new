@@ -2,8 +2,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+import Image1 from './team1.jpg'
+import Image2 from './team2.jpg'
+import Image3 from './team3.jpg'
+import Image4 from './team4.jpg'
 import { TextBlock } from '@/screens/TextBlock/TextBlock'
-import { NumSection, VacancySection } from '@/screens/index'
+import { NumSection, TeamSection, VacancySection } from '@/screens/index'
 import cn from 'classnames'
 
 import s from './vacancy.module.scss'
@@ -311,6 +315,33 @@ export default function Vacancy() {
     },
   ]
 
+  const teamList = [
+    {
+      id: 1,
+      name: 'Артём Иванов',
+      position: 'Бухгалтер   /   в компании 5 лет',
+      image: Image1,
+    },
+    {
+      id: 2,
+      name: 'Артём Иванов',
+      position: 'Бухгалтер   /   в компании 5 лет',
+      image: Image2,
+    },
+    {
+      id: 3,
+      name: 'Артём Иванов',
+      position: 'Бухгалтер   /   в компании 5 лет',
+      image: Image3,
+    },
+    {
+      id: 4,
+      name: 'Артём Иванов',
+      position: 'Бухгалтер   /   в компании 5 лет',
+      image: Image4,
+    },
+  ]
+
   return (
     <>
       <Head>
@@ -339,6 +370,7 @@ export default function Vacancy() {
 
         <NumSection className="mt-[228px] md:mt-[160px]" />
         <VacancySection className="mt-[452px]" data={vacancyList} />
+        <TeamSection className="mt-[474px]" data={teamList} />
       </MainLayout>
     </>
   )
