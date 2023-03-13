@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import { TextBlock } from '@/screens/TextBlock/TextBlock'
+import { NumSection, VacancySection } from '@/screens/index'
 import cn from 'classnames'
 
 import s from './vacancy.module.scss'
@@ -336,8 +337,8 @@ export default function Vacancy() {
           text="Все это время «Стройград» стремительно развивался, выходил на новые рынки, наращивал собственную производственную базу, осваивал новые направления бизнеса."
         />
 
-        {/* <NumberList data={numbersData} /> */}
-        {/* <VacancySection className="mt-[452px]" data={vacancyList} /> */}
+        <NumSection className="mt-[228px] md:mt-[160px]" />
+        <VacancySection className="mt-[452px]" data={vacancyList} />
       </MainLayout>
     </>
   )
