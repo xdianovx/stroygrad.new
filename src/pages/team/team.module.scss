@@ -15,3 +15,15 @@
     @apply object-cover block;
   }
 }
+
+@screen xl {
+  .hero__title {
+    @apply mt-[280px];
+  }
+}
+
+@screen md {
+  .hero__title {
+    @apply mt-[200px];
+  }
+}

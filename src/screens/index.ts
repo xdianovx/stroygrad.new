@@ -1,3 +1,4 @@
+export { TeamScrollSection } from './TeamScrollSection/TeamScrollSection'
 export { TeamSection } from './TeamSection/TeamSection'
 export { VacancySection } from './VacancySection/VacancySection'
 export { TextBlock } from './TextBlock/TextBlock'

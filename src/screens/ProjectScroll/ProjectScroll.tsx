@@ -26,49 +26,49 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
       id: 1,
       title: 'Достояние',
       img: img1,
-      link: '/projects',
+      link: '/projects/projectname',
       params: ['Ростов-на-Дону', 'Построен в 2021 г.', 'от 43,3 млн. рублей'],
     },
     {
       id: 2,
       title: 'Достояние',
       img: img2,
-      link: '/projects',
+      link: '/projects/projectname',
       params: ['Ростов-на-Дону', 'Построен в 2021 г.', 'от 43,3 млн. рублей'],
     },
     {
       id: 3,
       title: 'Достояние',
       img: img3,
-      link: '/projects',
+      link: '/projects/projectname',
       params: ['Ростов-на-Дону', 'Построен в 2021 г.', 'от 43,3 млн. рублей'],
     },
     {
       id: 4,
       title: 'Достояние',
       img: img4,
-      link: '/projects',
+      link: '/projects/projectname',
       params: ['Ростов-на-Дону', 'Построен в 2021 г.', 'от 43,3 млн. рублей'],
     },
     {
       id: 5,
       title: 'Достояние',
       img: img5,
-      link: '/projects',
+      link: '/projects/projectname',
       params: ['Ростов-на-Дону', 'Построен в 2021 г.', 'от 43,3 млн. рублей'],
     },
     {
       id: 6,
       title: 'Достояние',
       img: img6,
-      link: '/projects',
+      link: '/projects/projectname',
       params: ['Ростов-на-Дону', 'Построен в 2021 г.', 'от 43,3 млн. рублей'],
     },
     {
       id: 7,
       title: 'Достояние',
       img: img7,
-      link: '/projects',
+      link: '/projects/projectname',
       params: ['Ростов-на-Дону', 'Построен в 2021 г.', 'от 43,3 млн. рублей'],
     },
   ]
@@ -113,7 +113,9 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
                 <p className={s.card__title}>{item.title}</p>
                 <div className="flex mt-6 gap-8">
                   {item.params.map((item, idx) => (
-                    <p key={idx} className="text-xl">{item}</p>
+                    <p key={idx} className="text-xl">
+                      {item}
+                    </p>
                   ))}
                 </div>
               </div>
