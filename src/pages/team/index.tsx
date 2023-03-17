@@ -4,6 +4,8 @@ import s from './team.module.scss'
 
 import MainLayout from '@/layouts/MainLayout'
 
+import { TeamCard } from '@/components/index'
+
 import { LinkCircle, TextLg, TextMd, Title } from '@/ui/index'
 
 export default function Team() {
@@ -31,7 +33,7 @@ export default function Team() {
         <title>Стройград | Команда</title>
       </Head>
       <MainLayout>
-        <section className={s.hero}>
+        <section className={s.hero} data-scroll-section>
           <div className="container">
             <Title tag="h1" className={s.hero__title}>
               {title}
@@ -39,27 +41,23 @@ export default function Team() {
           </div>
         </section>
 
-        <section className="mt-[110px]">
+        <section className="mt-[110px]" data-scroll-section>
           <div className="container">
             <TextLg text={subTitle} />
           </div>
         </section>
 
-        <section className="mt-[159px]">
+        <section className="mt-[159px]" data-scroll-section>
           <div className="container">
             <div className="grid grid-cols-2 gap-[26px]">
-              {/*
               {teamData.map((item) => (
-
-          <TeamCard data={item} key={item.id} />
+                <TeamCard data={item} key={item.id} />
               ))}
-
-          */}
             </div>
           </div>
         </section>
 
-        <section className="mt-[692px]">
+        <section className="mt-[692px]" data-scroll-section>
           <div className="container">
             <div className="flex items-end">
               <h2 className="text-[300px] leading-none">Команда</h2>
@@ -68,7 +66,7 @@ export default function Team() {
           </div>
         </section>
 
-        <section className="mt-[600px]">
+        <section className="mt-[600px]" data-scroll-section>
           <div className="container">
             <div className="grid grid-cols-2">
               <div>
