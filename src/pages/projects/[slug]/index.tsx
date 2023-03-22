@@ -54,7 +54,7 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        <section className="mt-[90px]" data-scroll-section>
+        <section className="mt-[90px] w-full" data-scroll-section>
           <Image src={HeroSrc} alt={''} />
         </section>
 
