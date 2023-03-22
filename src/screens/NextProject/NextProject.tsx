@@ -36,7 +36,7 @@ export const NextProject = ({ className }: iNextProject) => {
         </div>
       </div>
 
-      <div className="absolute bg-white left-0 -bottom-1/2 h-full w-full z-20 border-t border-grayBorder pt-20">
+      <div className="absolute bg-white left-0 -bottom-1/2 h-full w-full z-20 border-t border-grayBorder">
         <Link
           href="/projects"
           className="underline underline-offset-2 text-center block"

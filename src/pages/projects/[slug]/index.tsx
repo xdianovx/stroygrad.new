@@ -12,6 +12,8 @@ import { NextProject } from '@/screens/index'
 
 import MainLayout from '@/layouts/MainLayout'
 
+import { CallbackForm, Input } from '@/components/index'
+
 import { PinLink, TextMd, Title } from '@/ui/index'
 
 export default function ProjectPage() {
@@ -194,6 +196,27 @@ export default function ProjectPage() {
           </div>
         </section>
 
+        <section className="mt-96" data-scroll-section>
+          <div className="container">
+            <div className="grid-2">
+              <p className="text-gray">Сотрудничество</p>
+              <div>
+                <h2 className="text-[56px] leading-none">
+                  Поможем подобрать <br /> лучшее решение
+                </h2>
+                <p className="mt-12">
+                  Мы за прочные <br /> и взаимовыгодные отоношения
+                </p>
+
+                <form>
+                  <input type="text" />
+                  <input type="text" />
+                  <input type="text" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
         <NextProject className="mt-96" />
       </MainLayout>
     </>
