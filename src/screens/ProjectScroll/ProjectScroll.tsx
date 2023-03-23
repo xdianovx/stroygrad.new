@@ -107,13 +107,13 @@ export const ProjectScroll = ({ className }: iProjectScroll) => {
               <div
                 className={cn(
                   s.card__info,
-                  'bg-[#000]/[.5] h-full flex  justify-center flex-col text-white gap-[84px] pl-[100px]',
+                  'bg-[#000]/[.5] h-full flex  justify-center flex-col text-white gap-[84px] pl-[100px] xl:gap-12 md:gap-6 sm:pl-8',
                 )}
               >
                 <p className={s.card__title}>{item.title}</p>
-                <div className="flex mt-6 gap-8">
+                <div className="flex mt-6 gap-8 xl:mt-0 sm:gap-2 sm:flex-col">
                   {item.params.map((item, idx) => (
-                    <p key={idx} className="text-xl">
+                    <p key={idx} className="text-xl xl:text-base sm:text-sm">
                       {item}
                     </p>
                   ))}
