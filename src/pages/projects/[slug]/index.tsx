@@ -39,14 +39,20 @@ export default function ProjectPage() {
   ]
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Название проекта</title>
+      </Head>
       <MainLayout>
-        <section className="mt-[380px]" data-scroll-section>
+        <section
+          className="mt-[380px] lg:mt-[240px] md:mt-[180px] sm:mt-[120px]"
+          data-scroll-section
+        >
           <div className="container">
-            <div className="flex flex-col gap-10">
-              <p className="text-[28px] leading-none">
+            <div className="flex flex-col gap-10 sm:gap-6">
+              <p className="text-[28px] leading-none lg:text-lg sm:text-sm">
                 Жилой
-                <br />
+                <br className="sm:hidden" />
+                <span className="sm:inline hidden"> </span>
                 комплекс
               </p>
               <Title tag="h1">Семейный квартал</Title>
@@ -59,18 +65,24 @@ export default function ProjectPage() {
         </section>
 
         <section
-          className="mt-[75px] border-b border-grayBorder pb-16"
+          className="mt-[75px] border-b border-grayBorder pb-16 lg:mt-10 lg:pb-9 sm:border-none"
           data-scroll-section
         >
           <div className="container">
-            <div className="flex justify-between">
+            <div className="flex justify-between sm:flex-col sm:gap-8">
               {features.map((item) => (
-                <div className="flex gap-4" key={item.id}>
-                  <span className="text-[40px]">/</span>
-                  <div className="text-[120px] leading-none">{item.num}</div>
-                  <div className="flex flex-col gap-5 mt-2">
-                    <h3 className="text-[32px] leading-none">{item.title}</h3>
-                    <p>{item.text}</p>
+                <div className="flex gap-4 sm:gap-2" key={item.id}>
+                  <span className="text-[40px] lg:text-[28px] md:text-xl sm:text-[20px]">
+                    /
+                  </span>
+                  <div className="text-[120px] leading-none lg:text-[64px] md:text-[48px] sm:text-[70px]">
+                    {item.num}
+                  </div>
+                  <div className="flex flex-col gap-5 mt-2 lg:mt-0 lg:gap-2">
+                    <h3 className="text-[32px] leading-none lg:text-[24px] md:text-xl sm:text-[20px]">
+                      {item.title}
+                    </h3>
+                    <p className="lg:text-sm">{item.text}</p>
                   </div>
                 </div>
               ))}
@@ -78,7 +90,7 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        <section className="mt-24" data-scroll-section>
+        <section className="mt-24 md:mt-16" data-scroll-section>
           <div className="container">
             <div className="grid-2">
               <div></div>
@@ -87,7 +99,7 @@ export default function ProjectPage() {
                 <Link
                   href="https://xn----8sbagoae1aaffpfq3cg1a0n.xn--p1ai/"
                   target="_blank"
-                  className="underline underline-offset-2 text-2xl"
+                  className="underline underline-offset-2 text-2xl lg:text-xl md:text-base"
                 >
                   жк-семейныйквартал.рф
                 </Link>
@@ -96,37 +108,54 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        <section className="mt-60" data-scroll-section>
+        <section
+          className="mt-60 lg:mt-48 md:mt-24 sm:mt-40"
+          data-scroll-section
+        >
           <div className="container">
             <div className="grid-2">
-              <p className="text-xl">
+              <p className="text-xl lg:text-base">
                 Новый массивный жилой <br /> комплекс в уютном месте <br /> в г.
                 Ставрополь
               </p>
 
-              <div className="flex flex-col">
+              <div className="flex flex-col sm:mt-20">
                 <TextMd
                   text={
                     '«Семейный квартал» — это экологичный проект рядом с Дубковским и Подушкинским лесами. Он сочетает близость к природным комплексам, престижный статус западного направления и возможность удобно добраться до столицы. Уютная малоэтажная застройка, евроквартиры с чистовой отделкой, закрытый двор без машин — квартал станет по-настоящему «своей» территорией, куда хочется возвращаться.'
                   }
                 />
 
-                <div className="grid grid-cols-2 mt-64 gap-[140px]">
-                  <div className="flex flex-col gap-3">
-                    <span className="text-xl">Ближайшее метро</span>
-                    <p className="text-[48px] leading-[120%]">Ставропольская</p>
+                <div className="grid grid-cols-2 mt-64 gap-[140px] lg:mt-40 lg:gap-20 md:mt-24 md:gap-16 sm:gap-8">
+                  <div className="flex flex-col gap-3 lg:gap-1">
+                    <span className="text-xl lg:text-base sm:text-gray sm:text-sm">
+                      Ближайшее метро
+                    </span>
+                    <p className="text-[48px] leading-[120%] lg:text-2xl sm:text-xl">
+                      Ставропольская
+                    </p>
                   </div>
-                  <div className="flex flex-col gap-3">
-                    <span className="text-xl">Готово:</span>
-                    <p className="text-[48px] leading-[120%]">5 домов</p>
+                  <div className="flex flex-col gap-3 lg:gap-1">
+                    <span className="text-xl lg:text-base sm:text-gray sm:text-sm ">
+                      Готово:
+                    </span>
+                    <p className="text-[48px] leading-[120%] lg:text-2xl sm:text-xl">
+                      5 домов
+                    </p>
                   </div>
-                  <div className="flex flex-col gap-3">
-                    <span className="text-xl">Построен:</span>
-                    <p className="text-[48px] leading-[120%]">в 2022 году</p>
+                  <div className="flex flex-col gap-3 lg:gap-1">
+                    <span className="text-xl lg:text-base sm:text-gray sm:text-sm">
+                      Построен:
+                    </span>
+                    <p className="text-[48px] leading-[120%] lg:text-2xl sm:text-xl">
+                      в 2022 году
+                    </p>
                   </div>
-                  <div className="flex flex-col gap-3">
-                    <span className="text-xl">Цена:</span>
-                    <p className="text-[48px] leading-[120%]">
+                  <div className="flex flex-col gap-3 lg:gap-1">
+                    <span className="text-xl lg:text-base sm:text-gray sm:text-sm">
+                      Цена:
+                    </span>
+                    <p className="text-[48px] leading-[120%] lg:text-2xl sm:text-xl">
                       от 43,3 млн. руб.
                     </p>
                   </div>
@@ -136,7 +165,7 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        <section className="mt-96" data-scroll-section>
+        <section className="mt-96 lg:mt-60" data-scroll-section>
           <div className="container">
             <div className="grid-2 items-end">
               <div>
@@ -148,22 +177,22 @@ export default function ProjectPage() {
               </div>
             </div>
 
-            <div className="grid-2 gap-10 h-[800px] mt-10">
-              <div>
-                <Image src={ImgSrc1} fill alt={''} />
+            <div className="grid-2 gap-10 h-[800px] mt-10 lg:h-[600px] md:h-[480px] md:gap-4 sm:h-auto">
+              <div className="sm:h-[420px]">
+                <Image src={ImgSrc1} className="object-cover " fill alt={''} />
               </div>
-              <div>
-                <Image src={ImgSrc2} fill alt={''} />
+              <div className="sm:h-[420px]">
+                <Image src={ImgSrc2} className="object-cover  " fill alt={''} />
               </div>
             </div>
-            <p className="max-w-[380px] mt-10">
+            <p className="max-w-[380px] mt-10 md:mt-4">
               Уютная малоэтажная застройка, евроквартиры с чистовой отделкой,
               закрытый двор без машин — квартал станет по-настоящему «своей»
               территорией, куда хочется возвращаться.
             </p>
 
             <div>
-              <Image src={ImgSrc3} alt={''} className="mt-60" />
+              <Image src={ImgSrc3} alt={''} className="mt-60 md:mt-24" />
               <div className="grid-2 mt-10">
                 <div></div>
                 <p className="max-w-sm">
@@ -174,12 +203,12 @@ export default function ProjectPage() {
               </div>
             </div>
 
-            <div className="grid-2 mt-96">
+            <div className="grid-2 mt-96 md:mt-24">
               <div></div>
               <Image src={ImgSrc2} />
             </div>
 
-            <div className="grid-2 mt-96">
+            <div className="grid-2 mt-96 md:mt-24 md:gap-6">
               <div className="max-w-sm flex flex-col gap-6">
                 <Image src={ImgSrc4} />
                 <p>
@@ -192,7 +221,7 @@ export default function ProjectPage() {
               <Image src={ImgSrc5} />
             </div>
 
-            <Image src={ImgSrc3} alt={''} className="mt-60" />
+            <Image src={ImgSrc3} alt={''} className="mt-60 md:mt-24" />
           </div>
         </section>
 
@@ -217,7 +246,7 @@ export default function ProjectPage() {
             </div>
           </div>
         </section>
-        <NextProject className="mt-96" />
+        <NextProject className="mt-96 sm:mt-24" />
       </MainLayout>
     </>
   )

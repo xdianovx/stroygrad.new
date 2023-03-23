@@ -19,19 +19,19 @@ export const NextProject = ({ className }: iNextProject) => {
       <div className="container">
         <span className="block text-gray text-center">Следующий проект</span>
 
-        <h2 className="text-center mt-6 text-[220px] leading-none">
+        <h2 className="text-center mt-6 text-[220px] leading-none lg:text-[120px] sm:text-4xl">
           Берег солнца
         </h2>
 
         <div className="flex gap-8 justify-center mt-8">
-          <p>Ростов-на-Дону</p>
-          <div>/</div>
-          <p>Постороен в 2021г.</p>
-          <div>/</div>
-          <p>от 43,3 млн. рублей</p>
+          <p className="sm:text-sm">Ростов-на-Дону</p>
+          <div className="sm:text-sm">/</div>
+          <p className="sm:text-sm">Постороен в 2021г.</p>
+          <div className="sm:text-sm">/</div>
+          <p className="sm:text-sm">от 43,3 млн. рублей</p>
         </div>
 
-        <div className="flex justify-center mt-16">
+        <div className="flex justify-center mt-16 sm:mt-10">
           <Image src={ImgSrc1} />
         </div>
       </div>
