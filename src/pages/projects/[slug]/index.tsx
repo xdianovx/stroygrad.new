@@ -60,7 +60,7 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        <section className="mt-[90px] w-full" data-scroll-section>
+        <section className="mt-[90px] w-full sm:mt-10" data-scroll-section>
           <Image src={HeroSrc} alt={''} />
         </section>
 
@@ -71,7 +71,7 @@ export default function ProjectPage() {
           <div className="container">
             <div className="flex justify-between sm:flex-col sm:gap-8">
               {features.map((item) => (
-                <div className="flex gap-4 sm:gap-2" key={item.id}>
+                <div className="flex gap-4 sm:gap-5" key={item.id}>
                   <span className="text-[40px] lg:text-[28px] md:text-xl sm:text-[20px]">
                     /
                   </span>
