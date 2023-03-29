@@ -129,6 +129,7 @@ export const ProjectsSlider = ({ className }: iProjectSlider) => {
                   swiper.navigation.update()
                 })
               }}
+              speed={500}
               loop={true}
               spaceBetween={32}
               modules={[Pagination, Navigation]}
