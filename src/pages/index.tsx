@@ -6,6 +6,7 @@ import {
   IndexHero,
   NumSection,
   ProjectScroll,
+  ProjectsSlider,
   ScrollImage,
   TextBlock,
 } from '../screens'
@@ -30,10 +31,13 @@ export default function Home() {
           text={`Все это время «Стройград» стремительно развивался, выходил на новые рынки, наращивал собственную производственную базу, осваивал новые направления бизнеса.`}
           className="mt-[200px] lg:mt-[160px] md:mt-[120px] sm:mt-20"
         />
-        <ProjectScroll className="mt-[380px] sm:mt-12" />
+        {/* <ProjectScroll className="mt-[380px] sm:mt-12" />
+         */}
+
+        <ProjectsSlider className="mt-[360px]" />
 
         <Accordition
-          className="mt-[80px] sm:mt-12"
+          className="mt-[320px] sm:mt-12"
           title={'Сервисы для\nсчастливой жизни'}
           text="Мы стремимся стать одним из крупнейших строительно-инвестиционных холдингов федерального уровня."
           subtitle={
