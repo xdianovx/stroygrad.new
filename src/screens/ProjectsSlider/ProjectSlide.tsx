@@ -31,7 +31,9 @@ export const ProjectSlide = ({ data }: iProjectSlide) => {
           ))}
         </div>
 
-        <LinkCircle className="ml-auto mr-5" link={data.link} text={''} />
+        <div className="ml-auto mr-5 w-8 h-8 flex justify-center">
+          <LinkCircle link={data.link} className="mx-auto" text={''} />
+        </div>
       </div>
     </div>
   )
