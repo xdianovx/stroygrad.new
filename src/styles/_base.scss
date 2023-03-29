@@ -40,6 +40,11 @@ p {
   grid-template-columns: 1fr 970px;
 }
 
+.swiper-slide-prev {
+  opacity: 0;
+  // transition: all 0.3s ease;
+}
+
 .container {
   margin: 0 auto;
   width: 100%;

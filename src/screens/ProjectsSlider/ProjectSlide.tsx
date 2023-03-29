@@ -13,7 +13,7 @@ export const ProjectSlide = ({ data }: iProjectSlide) => {
   return (
     <div className="w-full">
       <Image
-        className="w-full object-cover h-[710px]"
+        className="w-full block object-cover h-[710px]"
         src={data.img}
         alt={data.title}
       />

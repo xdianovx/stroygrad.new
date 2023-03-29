@@ -78,30 +78,26 @@ export const ProjectsSlider = ({ className }: iProjectSlider) => {
   return (
     <section className={cn(className)} data-scroll-section>
       <div className="container">
-        <div className="flex gap-12 items-stretch">
-          <div className="max-w-[378px] shrink-0 w-full flex flex-col">
-            <div className="flex flex-col">
-              <div>
-                <h2 className="text-[56px] leading-[44px]">
-                  Наши
-                  <br />
-                  проекты
-                </h2>
-                <p className="mt-6 font-light">(35+ проектов)</p>
-              </div>
-            </div>
+        <div className="flex items-end">
+          <h2 className="text-[300px] leading-[245px] md:text-2xl md:leading-none">
+            Наши
+            <br />
+            проекты
+          </h2>
 
-            <div className="mt-auto">
-              <div className="swiper-paginatin"></div>
-              <div className="flex gap-2  mt-5 mb-2">
-                <SliderArrowPrev refEl={navigationPrevRef} />
-                <SliderArrowNext refEl={navigationNextRef} />
-              </div>
-            </div>
+          <div className="flex gap-2 ml-auto mt-5 mb-2 xl:mt-3">
+            <SliderArrowPrev refEl={navigationPrevRef} />
+            <SliderArrowNext refEl={navigationNextRef} />
           </div>
+        </div>
+      </div>
 
-          <div className="w-full">
+      <div className="mt-[105px]">
+        <hr className="border-grayLight" />
+        <div className="container">
+          <div className="my-16">
             <Swiper
+              className="w-full overflow-visible"
               pagination={{
                 type: 'fraction',
                 el: '.swiper-paginatin',
@@ -112,8 +108,6 @@ export const ProjectsSlider = ({ className }: iProjectSlider) => {
                   )
                 },
               }}
-              slidesPerView="auto"
-              spaceBetween={32}
               onBeforeInit={(swiper) => {
                 swiper.params.navigation.prevEl = navigationPrevRef.current
                 swiper.params.navigation.nextEl = navigationNextRef.current
@@ -136,10 +130,24 @@ export const ProjectsSlider = ({ className }: iProjectSlider) => {
                 })
               }}
               loop={true}
+              spaceBetween={32}
               modules={[Pagination, Navigation]}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                },
+                768: {},
+                1520: {},
+                1681: {
+                  slidesPerView: 'auto',
+                },
+              }}
             >
               {projects.map((item) => (
-                <SwiperSlide key={item.id} className="max-w-[1260px] w-full">
+                <SwiperSlide
+                  key={item.id}
+                  className="max-w-[1260px] w-full xl:max-w-none"
+                >
                   <ProjectSlide data={item} />
                 </SwiperSlide>
               ))}
@@ -147,6 +155,7 @@ export const ProjectsSlider = ({ className }: iProjectSlider) => {
           </div>
         </div>
       </div>
+      <hr className="border-grayLight" />
     </section>
   )
 }
