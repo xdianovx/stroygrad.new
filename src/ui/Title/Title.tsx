@@ -44,7 +44,7 @@ export const Title = ({ className, tag, children }: iTitle): any => {
           className={cn(s.h1, className)}
         >
           {children.split('\n').map((word: any, idx: any) => (
-            <div key={idx} className="block overflow-hidden">
+            <div key={idx} className="block">
               <motion.span className="inline-block" variants={wordAnimation}>
                 {word + '\u00A0'}
               </motion.span>
